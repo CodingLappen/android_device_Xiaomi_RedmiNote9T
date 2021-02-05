@@ -38,6 +38,10 @@ before_script:
   # - tar --zstd -xf MinimalOmniRecovery-twrp-*.*-norepo-2020*.tzst.aa --directory $HOME/twrp/ && rm MinimalOmniRecovery*.tzst.*
 script:
   # Replace your ${_USERNAME_}, ${_REPO_SLUG_}, ${_VENDORNAME_}, ${_CODENAME_}
+  - export _VENDORNAME_=redmi
+  - export _CODENAME_=CodingLappen
+  - export _REPO_SLUG_=android_device_Xiaomi_RedmiNote9T
+  - export _CODENAME_=cannong
   - cd $HOME/twrp/ && git clone https://github.com/${_USERNAME_}/${_REPO_SLUG_}.git device/${_VENDORNAME_}/${_CODENAME_}
   - rm -rf bootable/recovery && git clone https://github.com/omnirom/android_bootable_recovery -b android-9.0 --depth 1 bootable/recovery
   - |
