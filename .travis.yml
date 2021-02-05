@@ -42,7 +42,8 @@ script:
   - export _CODENAME_=CodingLappen
   - export _REPO_SLUG_=android_device_Xiaomi_RedmiNote9T
   - export _CODENAME_=cannong
-  - cd $HOME/twrp/ && git clone https://github.com/${_USERNAME_}/${_REPO_SLUG_}.git device/${_VENDORNAME_}/${_CODENAME_}
+  - cd $HOME/twrp/ && echo "Successfull!"
+  - git clone https://github.com/${_USERNAME_}/${_REPO_SLUG_}.git device/${_VENDORNAME_}/${_CODENAME_}
   - rm -rf bootable/recovery && git clone https://github.com/omnirom/android_bootable_recovery -b android-9.0 --depth 1 bootable/recovery
   - |
     docker run --rm -i -e USER_ID=$(id -u) -e GROUP_ID=$(id -g) -v "$(pwd):/home/builder/twrp/:rw,z" -v "${HOME}/.ccache:/srv/ccache:rw,z" fr3akyphantom/droid-builder bash << EOF
