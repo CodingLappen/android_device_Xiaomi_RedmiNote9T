@@ -39,7 +39,7 @@ before_script:
 script:
   # Replace your ${_USERNAME_}, ${_REPO_SLUG_}, ${_VENDORNAME_}, ${_CODENAME_}
   - export _VENDORNAME_=redmi
-  - export _CODENAME_=CodingLappen
+  - export _USERNAME_=CodingLappen
   - export _REPO_SLUG_=android_device_Xiaomi_RedmiNote9T
   - export _CODENAME_=cannong
   - cd $HOME/twrp/ && echo "Successfull!"
